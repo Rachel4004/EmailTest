@@ -29,7 +29,7 @@ sendEmail(){
   this.updateDataFromServer(response)
 },
 (error) => {    
-   if(error.status == 497)  
+   if(error.status == 429)  
    this.updateDataFromServer(error.error)  
    this.isErrorReceived =true;  
   console.error('Request failed with error :'+  error.status)
