@@ -1,0 +1,19 @@
+
+ <div class="viewer">
+
+ <div class="form-group">
+	<label>Email:</label>
+	<input type="email" class="form-control"  [formControl]="email" [(ngModel)]="theEmail"/>
+  </div>
+     <div *ngIf="email.invalid && email.touched || email.dirty">        
+        <div *ngIf="email.errors?.['email']" class="text-danger" >Please enter valid email address</div>
+  	</div>
+
+    
+ <input type="button" value="Send" (click)="sendEmail()"  [disabled]="email.hasError('email') || email.hasError('required') || theEmail=='' ">
+ <div *ngIf="isReceiveMessage">
+ <label  >{{theDateTime  | date: "MM-dd-yyyy HH:mm:ss"}}</label>
+</div>
+ <div *ngIf="isErrorReceived" class="text-error"> error 429 - server busy or too many requests at a time</div>
+
+</div>

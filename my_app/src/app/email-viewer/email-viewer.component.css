@@ -1,0 +1,19 @@
+.date{
+visibility: hidden;
+}
+.text-danger{
+color: red
+}
+
+.text-error{
+   color: rgb(252, 135, 25)
+   }
+.form-group{
+    margin: 5px;
+}
+button{
+    margin: 5px;  
+}
+.form-control{
+    margin: 5px;
+}
